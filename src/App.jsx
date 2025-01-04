@@ -12,26 +12,27 @@ const App = () => {
   return (
     <>
       <div>
-        <ul className="flex space-x-6">
+        <ul className="flex space-x-6 justify-center">
           <li>
-            <img src="/favicon.ico" className="w-10 ml-80 " />
+            <img src="/favicon.ico" className="w-10 " />
           </li>
-          <li className="mr-64 font-extrabold bg-gradient-to-r from-purple-600 to-purple-950 bg-clip-text text-transparent ">
+          <li className=" font-extrabold text-xl bg-gradient-to-b from-gray-500 to-purple-950 shadow-slate-100 bg-clip-text text-transparent ">
             <p>Tailoring shop</p>
           </li>
         </ul>
 
-        <div className="border-4 border-double border-cyan-400 ">
+        <div className="border-4 border-double border-black ">
           <Header />
         </div>
         <Router>
           <Menu /> {/* Navbar is always displayed */}
-          <div className="p-6">
+          <div className="p-6 ">
             <Routes>
+              {/* <Routes path="/" element={<Backbutton />} /> */}
               <Route path="/services" element={<Services />} />
               <Route path="/map" element={<Map />} />
               <Route path="/contact" element={<Contact />} />
-              <Route path="/home" element={<QRCodeComponent />} />
+              <Route path="/qr" element={<QRCodeComponent />} />
             </Routes>
           </div>
         </Router>
